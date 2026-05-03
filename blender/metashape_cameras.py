@@ -1,3 +1,13 @@
+bl_info = {
+    "name": "Metashape Camera Backgrounds",
+    "author": "Custom Script",
+    "version": (1, 0),
+    "blender": (3, 0, 0), # Works for 3.x, 4.x, and 5.x
+    "location": "View3D > Sidebar (N) > Metashape",
+    "description": "Assigns undistorted images from a folder to matching cameras.",
+    "category": "3D View",
+}
+
 import bpy
 import os
 
@@ -42,7 +52,6 @@ class OBJECT_OT_assign_camera_images(bpy.types.Operator):
                     bg = obj.data.background_images.new()
                     bg.image = img
                     
-                    # Hardcoded to CROP based on workflow
                     bg.frame_method = 'CROP'
                     bg.scale = scale_val
                     
@@ -102,7 +111,6 @@ def register():
         name="Image Directory", subtype='DIR_PATH'
     )
     
-    # Precision increased to 5 to handle exact matches like 1.01600
     bpy.types.Scene.ms_image_scale = bpy.props.FloatProperty(
         name="Scale", default=1.00000, precision=5
     )
