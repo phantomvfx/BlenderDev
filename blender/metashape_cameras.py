@@ -61,7 +61,7 @@ class VIEW3D_PT_metashape_cameras(bpy.types.Panel):
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
     bl_category = 'Metashape' 
-    bl_label = "Camera Backgrounds V3"
+    bl_label = "Camera Backgrounds"
 
     def draw(self, context):
         layout = self.layout
