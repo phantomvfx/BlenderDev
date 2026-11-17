@@ -1,3 +1,29 @@
+"""
+Metashape Camera Backgrounds
+============================
+
+Purpose
+    Assigns undistorted photos exported from Agisoft Metashape as background
+    images on the matching cameras in the current scene. A camera matches an
+    image when the camera DATA name equals the image file name without its
+    extension (exact, case-sensitive).
+
+Target Blender
+    3.0+ (written for 3.x / 4.x).
+
+Install / run
+    - Add-on: Edit > Preferences > Add-ons > Install (4.2+: "Install from
+      Disk..."), pick this file, enable "Metashape Camera Backgrounds".
+    - One-off: open in the Text Editor and press Run Script.
+
+Use
+    View3D > Sidebar (N) > Metashape: pick the undistorted image folder, set
+    Master Scale, click "Apply to All Cameras".
+    Note: existing background images on matched cameras are replaced.
+
+Full documentation: docs/metashape_cameras.md
+"""
+
 bl_info = {
     "name": "Metashape Camera Backgrounds",
     "author": "Custom Script",

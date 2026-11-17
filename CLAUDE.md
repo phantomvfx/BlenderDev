@@ -13,7 +13,8 @@ Python scripts. Active development happens here; reference docs live in
 - Remote: `https://github.com/phantomvfx/BlenderDev.git`, branch `master`.
 - GitHub account: **phantomvfx** (`gh auth switch --user phantomvfx` if another
   account is active).
-- The repo has a single code folder, `scripts/`, holding `*.py` files.
+- Code lives in `scripts/` (`*.py`); each tool has a matching page in `docs/<tool_name>.md`.
+- `README.md` holds the tool index - add a row for every new tool.
 - `reference/` is git-ignored - never commit doc imports.
 
 ## Commands
@@ -37,6 +38,7 @@ assume the latest installed. Record the target version in the script header.
 L:\BlenderDevSandbox\
 |-- CLAUDE.md
 |-- README.md
+|-- docs/         <- one Markdown page per tool (usage + how it works)
 |-- reference/    <- local-only reference docs (git-ignored)
 `-- scripts/      <- Blender Python scripts (*.py)
 ```
@@ -44,6 +46,6 @@ L:\BlenderDevSandbox\
 ## Conventions
 
 - Keep tools self-contained and documented at the top of each file (purpose,
-  target Blender version, how to install/run).
+  target Blender version, how to install/run), with full docs in `docs/`.
 - Reference docs are pointers only - never copy doc trees into the tracked repo.
 
