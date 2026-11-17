@@ -1,7 +1,6 @@
 ﻿# BlenderDev
 
-A collection of Blender tools and Python scripts for VFX and photogrammetry
-work.
+Blender Python tools for VFX and photogrammetry workflows.
 
 ## Tools
 
